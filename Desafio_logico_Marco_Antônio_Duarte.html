@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+<body>
+    <h1>Exercício 3</h1>
+    <script>
+
+        function validarEntrada(valor, nomeCampo) {
+            if (isNaN(valor) || valor <= 0) {
+                document.writeln(`Por favor, insira um valor válido para ${nomeCampo}.`);
+                throw new Error(`Valor de ${nomeCampo} inválido`);
+            }
+        }
+        let distancia = parseFloat(prompt(`Qual a distância percorrida de sua casa até seu trabalho (em km)? `));
+        validarEntrada(distancia, "distância");
+
+        let consumoMedio = parseFloat(prompt(`Qual o consumo médio do seu carro (em km/L)? `));
+        validarEntrada(consumoMedio, "consumo médio");
+        let consumoNecessarioLitros = distancia /consumoMedio;
+        document.writeln(`O consumo necessário é ${consumoNecessarioLitros} litros`);
+
+        let qtdPostos = parseInt(prompt(`Quantos postos você pesquisou? `));
+        let menorPreco = Infinity;
+        let somaTotal = 0;
+        for(let i = 1; qtdPostos >= i; i++){
+            let precoCombustivel = parseFloat(prompt(`Digite o valor (em R$) no posto ${i} `));
+            validarEntrada(precoCombustivel, `preço do posto ${i}`);
+            somaTotal += precoCombustivel;
+            if(precoCombustivel < menorPreco){
+                menorPreco = precoCombustivel;
+            }
+        }
+        let media = somaTotal / qtdPostos;
+        let gastoDiario = 2*(consumoNecessarioLitros * menorPreco);
+        document.writeln(`<br>O menor valor pesquisado é: R$ ${menorPreco}`);
+        document.writeln(`<br>A média dos valores pesquisados é: R$ ${media}`);
+        document.writeln(`<br>O gasto diário (ida e volta) é: R$ ${gastoDiario}`);
+    </script>
+</body>
+</html>
