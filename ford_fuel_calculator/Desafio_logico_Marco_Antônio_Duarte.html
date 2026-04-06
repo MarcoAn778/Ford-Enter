@@ -10,25 +10,27 @@
     <script>
 
         function validarEntrada(valor, nomeCampo) {
-            if (isNaN(valor) || valor <= 0) {
-                document.writeln(`Por favor, insira um valor válido para ${nomeCampo}.`);
-                throw new Error(`Valor de ${nomeCampo} inválido`);
+            while (isNaN(valor) || valor <= 0) {
+                alert(`Valor de ${nomeCampo} inválido. Por favor, insira um número válido.`);
+                valor = parseFloat(prompt(`Informe novamente o valor do campo de ${nomeCampo}? `));
             }
+            return valor;
         }
         let distancia = parseFloat(prompt(`Qual a distância percorrida de sua casa até seu trabalho (em km)? `));
-        validarEntrada(distancia, "distância");
+        distancia = validarEntrada(distancia, "distância");
 
         let consumoMedio = parseFloat(prompt(`Qual o consumo médio do seu carro (em km/L)? `));
-        validarEntrada(consumoMedio, "consumo médio");
+        consumoMedio = validarEntrada(consumoMedio, "consumo médio");
         let consumoNecessarioLitros = distancia /consumoMedio;
         document.writeln(`O consumo necessário é ${consumoNecessarioLitros} litros`);
 
         let qtdPostos = parseInt(prompt(`Quantos postos você pesquisou? `));
+        qtdPostos = validarEntrada(qtdPostos, "quantidade de postos");
         let menorPreco = Infinity;
         let somaTotal = 0;
         for(let i = 1; qtdPostos >= i; i++){
             let precoCombustivel = parseFloat(prompt(`Digite o valor (em R$) no posto ${i} `));
-            validarEntrada(precoCombustivel, `preço do posto ${i}`);
+            precoCombustivel = validarEntrada(precoCombustivel, `preço do posto ${i}`);
             somaTotal += precoCombustivel;
             if(precoCombustivel < menorPreco){
                 menorPreco = precoCombustivel;
