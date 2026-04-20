@@ -79,12 +79,16 @@ main {
     padding-right: 150px;
 }
 
-.products-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+.products-table {
+    border-collapse: separate;
+    border-spacing: 30px 20px;
     margin-top: 20px;
+    width: auto;
+}
+
+.products-table td {
+    vertical-align: top;
+    padding: 0;
 }
 
 .product-card {
@@ -237,6 +241,31 @@ footer {
     .menu-bar a {
         font-size: 14px;
         padding: 10px;
+    }
+
+    .products-table {
+        display: block;
+        width: 100%;
+        max-width: fit-content;
+        margin: 0 auto;
+        border-spacing: 0;
+    }
+
+    .products-table tr {
+        display: block;
+        width: 100%;
+    }
+    
+    .products-table td {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    .product-card {
+        margin: 0 auto;
     }
 
     footer {
