@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Combustível - Ford</title>
+    <link rel="stylesheet" href="/Ford_fuel_calculator_complete/css/style.css" />
+    <link rel="icon" type="image/png" href="/Ford_fuel_calculator_complete/asserts/Ford-logo.png" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img class="logo" src="/Ford_fuel_calculator_complete/asserts/Ford-logo.png" alt="Ford-logo" />
+        <h1>Calculadora de Combustível</h1>
+      </header>
+      <main id="setup-form">
+        <div class="input-group">
+          <label>Qual a distância percorrida de sua casa até seu trabalho (em km)?</label>
+          <input type="number" id="distance" placeholder="EX: 20" />
+        </div>
+        <div class="input-group">
+          <label>Qual o consumo de combustível do seu veículo (km/l)?</label>
+          <input type="number" id="fuel-consumption" placeholder="EX: 15" />
+        </div>
+        <div class="input-group">
+          <label>Quantos postos de combustível você pesquisou?</label>
+          <input type="number" id="num-stations" placeholder="EX: 3" />
+        </div>
+        <button onclick="iniciarPesquisa()">Começar Pesquisa</button>
+      </main>
+      <section id="results" class="hidden"></section>
+    </div>
+    <div id="custom-modal" class="modal hidden">
+      <div class="modal-content">
+        <h3 id="modal-title">Entrada de Dados</h3>
+        <p id="modal-msg"></p>
+        <input type="number" id="modal-input" step="0.01" />
+        <button id="modal-confirm">Confirmar</button>
+      </div>
+    </div>
+    <script src="/Ford_fuel_calculator_complete/js/script.js"></script>
+  </body>
+</html>
