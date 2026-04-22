@@ -44,7 +44,7 @@ body {
 .menu-bar img {
     grid-column: 1;
     justify-self: start;
-    width: 100px;
+    width: 150px;
     height: auto;
     margin-left: 10px;
 }
