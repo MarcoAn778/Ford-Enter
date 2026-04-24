@@ -71,18 +71,17 @@ main {
     height: 425px;
 }
 .video-container p {
+    text-align: center;
     font-family: var(--font-family);
     color: var(--preto);
-    font-size: 16px;
+    font-size: 18px;
     margin-top: 5px;
-    padding-left: 150px;
-    padding-right: 150px;
 }
 
 .products-table {
     border-collapse: separate;
     border-spacing: 30px 20px;
-    margin-top: 20px;
+    margin-top: 0;
     width: auto;
 }
 
@@ -231,7 +230,7 @@ footer {
 
 /*--------------------------------------------------Responsividade--------------------------------------------------------------*/
 
-@media (max-width: 768px) {
+@media (max-width: 500px) {
     .menu-bar {
         display: flex;
         justify-content: space-between;
@@ -240,7 +239,7 @@ footer {
 
     .menu-bar a {
         font-size: 14px;
-        padding: 10px;
+        padding: 5px;
     }
 
     .products-table {
