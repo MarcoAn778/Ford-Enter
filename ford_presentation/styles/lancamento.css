@@ -242,6 +242,11 @@ footer {
         padding: 5px;
     }
 
+    .menu-bar img {
+        width: 80px;
+        margin-left: 0;
+    }
+
     .products-table {
         display: block;
         width: 100%;

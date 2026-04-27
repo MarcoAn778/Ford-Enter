@@ -64,7 +64,7 @@ main {
 
 main img {
     width: 100%;
-    max-width: 1600px;       
+    max-width: 1800px;       
     height: auto;
     object-fit: contain;
 }
@@ -142,6 +142,11 @@ footer {
     .menu-bar a {
         font-size: 14px;
         padding: 5px;
+    }
+
+    .menu-bar img {
+        width: 80px;
+        margin-left: 0;
     }
 
     footer {
