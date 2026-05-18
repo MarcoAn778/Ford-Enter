@@ -166,3 +166,99 @@ footer {
         justify-content: center;
     }
 }
+
+/*--------------------------------------------------Carrossel-------------------------------------------------*/
+
+#Carousel {
+    width: 100%;
+    max-width: 1800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    gap: 15px;
+}
+
+/* Garante que o link da imagem se comporte corretamente */
+#carousel-image-holder a {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+}
+
+#carousel-image-holder img {
+    width: 100%;
+    height: auto;
+    max-height: 550px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito visual sutil ao passar o mouse sobre a imagem clicável */
+#carousel-image-holder img:hover {
+    transform: scale(1.01); 
+}
+
+/* Estilo do texto da legenda pura */
+#carousel-title {
+    margin-top: 20px;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 18px;
+    color: var(--preto);
+    font-weight: 500;
+}
+
+/* Estilização dos Botões de Avançar e Voltar */
+#carousel-prev, #carousel-next {
+    background-color: var(--azul_ford);
+    color: var(--branco);
+    border: none;
+    font-size: 24px;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    user-select: none;
+}
+
+#carousel-prev:hover, #carousel-next:hover {
+    background-color: #112255;
+    transform: scale(1.1); /* Dá um leve destaque ao passar o mouse */
+}
+
+/* Área da Legenda */
+#carousel-title {
+    margin-top: 20px;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 18px;
+    color: var(--preto);
+}
+
+#carousel-title p {
+    margin: 0;
+}
+
+/* Estilização estrita da palavra clicável "aqui" */
+#carousel-title a {
+    color: var(--azul_ford);
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+#carousel-title a:hover {
+    color: #112255;
+}
+
+/* Responsividade para telas de celulares */
+@media (max-width: 500px) {
+    #carousel-prev, #carousel-next {
+        font-size: 16px;
+        padding: 10px 12px;
+    }
+    #carousel-title {
+        font-size: 14px;
+    }
+}

@@ -6,6 +6,7 @@
     <title>FordEnter</title>
     <link rel="stylesheet" href="../styles/homePage.css">
     <link rel="icon" type="image/png" href="../img/ford-96.png">
+    <script src="js/carousel.js"></script>
 </head>
 <body>
     <header>    
@@ -21,10 +22,16 @@
         </div>
     </header>
     <main>
-        <a href="lancamento.html"><img class="product-image" src="../img/imagem_1.jpg" alt="produto"></a>
-        <p>
-            Essa é a nova Ranger Ford 2022. Verifique Novidades <a href="lancamento.html">aqui!</a>
-        </p>
+        <div id="Carousel"></div>
+        <div id="carousel-title"></div>
+
+        <script>
+            carouselArr.push(new Carousel("imagem_1.jpg", "Esta é a nova Ranger Ford 2022. Verifique novidades.", "lancamento.html"));
+            carouselArr.push(new Carousel("imagem_2.jpg", "Ford a nossa história.", "#"));
+            carouselArr.push(new Carousel("imagem_3.jpg", "Nova Ford Bronco Sport 2022. Conheça o modelo.", "lancamento.html"));
+            
+            Carousel.Start(carouselArr);
+        </script>
     </main>
     <footer>
         <div class="social-media">
