@@ -6,6 +6,7 @@
     <title>FordEnter</title>
     <link rel="stylesheet" href="../styles/contato.css">
     <link rel="icon" type="image/png" href="../img/ford-96.png">
+    <script src="js/form.js"></script>
 </head>
 <body>
     <header>    
@@ -28,14 +29,14 @@
         <div class="form-container">
             <h3>Sobre Você</h3>
         
-            <form action="#" method="POST">
+            <form onsubmit="event.preventDefault(); Post(this);">
                 <input type="text" id="nome" name="nome" placeholder="nome*" required>
                 <input type="text" id="sobrenome" name="sobrenome" placeholder="sobrenome*" required>
                 <input type="email" id="email" name="email" placeholder="e-mail*" required>
                 <input type="text" id="cpf" name="cpf" placeholder="cpf*" required>
                 <input type="tel" id="telefone" name="telefone" placeholder="telefone*" required>
             
-                <select id="tipo_contato" name="tipo_contato">
+                <select id="tipo_contato" name="tipo_contato" required>
                     <option value="" disabled selected>COMO DESEJA SER CONTATADO</option>
                     <option value="elogio">Elogio</option>
                     <option value="reclamação">Reclamação</option>
@@ -44,7 +45,7 @@
 
                 <input type="text" id="mensagem" name="mensagem" placeholder="MENSAGEM*" required>
                 
-                <button class="btn-enviar">Enviar</button>
+                <button type="submit" class="btn-enviar">Enviar</button>
             </form>
         </div>
     </main>
